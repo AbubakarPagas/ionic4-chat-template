@@ -1,0 +1,47 @@
+<ion-content>
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>comments</ion-title>
+  </ion-toolbar>
+  <ion-list>
+    <div>
+      <!-- for comment box -->
+      <div id="chat-container">
+        <span class="line-style"></span>
+        <hr>
+        <div class=" message-wrap">
+          <div *ngFor="let item of commentList" class="message">
+            <div class="message-left">
+              <div>
+                <img class="user-img" [src]="item.avatar">
+                <div class="msg-detail">
+                  <div class="msg-content">
+                    <strong class="line-breaker-name">{{item.username}}</strong>
+                    <p class="line-breaker-left ">{{item.comment}} </p>
+                    <p class="line-time-left ">{{item.time}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </ion-list>
+
+</ion-content>
+<ion-footer translucent>
+  <ion-item>
+    <ion-input class="input-box" type="text" placeholder="Write a comment..." [(ngModel)]="comment"></ion-input>
+    <ion-button fill="clear" [disabled]="!comment" (click)="postComment()">
+      <ion-icon slot="icon-only" type="text" name="send"></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-footer>

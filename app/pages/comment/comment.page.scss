@@ -1,0 +1,183 @@
+ion-title {
+  margin-left: 2%;
+  font-family: "Times New Roman", Times, serif;
+}
+// for the footer box element comment box
+// no mre changing the template in the context ionic temaplate
+.message-input {
+  width: 100%;
+  border: 1px solid var(--ion-color-primary);
+  border-radius: 10px;
+  background: #fff;
+  resize: none;
+  padding-left: 10px;
+  padding-right: 1;
+}
+
+#chat-parent {
+  scroll-behavior: smooth;
+}
+.header {
+  --background: #224068;
+}
+.headerColor {
+  --color: #fff;
+  color: #fff;
+}
+.line-breaker {
+  white-space: pre-line;
+}
+.input-wrap {
+  display: flex;
+  input {
+    flex: 1;
+    border: 0;
+    border-style: solid;
+    padding: 10px;
+  }
+}
+
+.message-wrap {
+  // padding: 0 10px;
+
+  .message {
+    position: relative;
+    //  padding: 2px 0;
+    .user-img {
+      position: absolute;
+      object-fit: cover;
+      border-radius: 45px;
+      width: 35px;
+      height: 35px;
+      border: 2px solid #fff;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+    }
+    .msg-detail {
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+      .msg-info {
+        p {
+          font-size: 0.8em;
+          color: #8899;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      }
+      .msg-content {
+        position: relative;
+        border-radius: 12px;
+        padding: 2%;
+        width: auto;
+        max-width: 80%;
+        margin-top: -2x;
+        .line-breaker {
+          white-space: pre-line;
+          padding-left: 5px;
+          padding-right: 5px;
+          // font-size: initial;
+          font-family: auto;
+        }
+        .line-time {
+          white-space: pre-line;
+          padding-left: 41px;
+          text-align: end;
+          font-size: xx-small;
+          margin: 2px;
+          font-family: "Times New Roman", Times, serif;
+          color: #c3c0c0;
+        }
+        .line-time-left {
+          white-space: pre-line;
+          padding-left: 29px;
+          text-align: end;
+          font-size: xx-small;
+          margin: 2px;
+          font-family: "Times New Roman", Times, serif;
+          color: #9e9e9e;
+        }
+        .line-breaker-left {
+          white-space: pre-line;
+          padding-left: 5px;
+          padding-right: 5px;
+          // font-size: initial;
+          color: #3a3636;
+          //text-align: end;
+        }
+        .line-breaker-name {
+          white-space: pre-line;
+          padding-left: 5px;
+          padding-right: 5px;
+          // font-size: initial;
+          color: var(--ion-color-primary);
+          font-family: auto;
+          //text-align: end;
+        }
+      }
+    }
+  }
+  .message-left {
+    .msg-content {
+      float: left;
+      position: relative;
+      background: #d2d2d2;
+      //background: rgba(37, 61, 99, 0.8);
+      color: #000;
+      font-family: sans-serif;
+
+      :before {
+        content: "";
+        position: absolute;
+        background: transparent;
+        width: 10px;
+        height: 8px;
+        left: -10px;
+        top: 9px;
+        box-sizing: border-box;
+        border-right: 10px solid #d2d2d2;
+        // border-right: 10px solid rgba(37, 61, 99, 0.8);
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+      }
+    }
+    .msg-detail {
+      padding-left: 52px;
+      padding-bottom: 10px;
+    }
+    .user-img {
+      left: 0;
+      z-index: 9999;
+      border: 2px solid #fff;
+    }
+  }
+}
+
+span.line-style {
+  position: absolute;
+  border-left: 3px solid var(--ion-color-primary);
+  margin-left: 16px;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+span.triangle {
+  border-radius: 2px;
+  height: 14px;
+  width: 14px;
+  top: 14px;
+  display: block;
+  border-style: solid;
+  border-color: rgba(37, 61, 99, 0.83);
+  border-width: 1px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  background: rgba(37, 61, 99, 0.83);
+  left: 53px;
+}

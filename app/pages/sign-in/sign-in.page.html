@@ -1,0 +1,72 @@
+<ion-content class="ion-padding">
+
+  <ion-card class="animated zoomIn delay-10s">
+    <ion-card-header class="scroll">
+      Sign In
+    </ion-card-header>
+    <ion-card-content>
+
+      <form [formGroup]="emailPasswordForm">
+        <ion-list>
+          <ion-item>
+            <ion-label class="floating" position="floating">Email Address</ion-label>
+            <ion-input type="email" formControlName="email" [(ngModel)]="email" name="email"></ion-input>
+          </ion-item>
+          <!-- for displaying the erroe massage -->
+          <div class="error-messages">
+            <ng-container *ngFor="let error of error_messages.email">
+              <div class="error-message"
+                *ngIf="emailPasswordForm.get('email').hasError(error.type) && (emailPasswordForm.get('email').dirty || emailPasswordForm.get('email').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+          <!-- for closeing the erro message -->
+          <ion-item>
+            <ion-label class="floating" position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="password" [(ngModel)]="password" name="password"></ion-input>
+          </ion-item>
+          <!-- for displaying the erroe massage -->
+          <div class="error-messages">
+            <ng-container *ngFor="let error of error_messages.password">
+              <div class="error-message"
+                *ngIf="emailPasswordForm.get('password').hasError(error.type) && (emailPasswordForm.get('password').dirty || emailPasswordForm.get('password').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+          <!-- for closeing the erro message -->
+        </ion-list>
+        <ion-item lines="none">
+          <p class="p">Forget password?</p>
+        </ion-item>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <div>
+    <ion-list class="buttoms">
+      <ion-row>
+        <ion-col col-2>
+          <ion-button class="animated zoomInUp delay-1000s" fill="outline" shape="round" size="default"
+            (click)="back()"> back
+            <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col col-2>
+          <ion-button class="animated zoomInUp delay-1000s" size="default" [disabled]="!emailPasswordForm.valid"
+            shape="round" (click)="login()">
+            Sign In
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+
+    </ion-list>
+
+
+
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,65 @@
+<ion-header [scrollHide]="headerScrollConfig" [scrollContent]="pageContent">
+  <ion-toolbar color="primary">
+    <ion-title>
+      feeds
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #pageContent fullscreen>
+
+  <ion-card *ngFor="let item of timelineData" class="header">
+    <div>
+      <ion-label class="title">
+        <ion-label class="time">{{item.time}}</ion-label>
+      </ion-label>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="{{item.image}}" />
+        </ion-avatar>
+        <ion-col>
+          <ion-label text-wrap>
+            <ion-text>
+              <ion-label>
+                {{item.name}}
+              </ion-label>
+              <ion-label class="p">{{item.about}}</ion-label>
+            </ion-text>
+          </ion-label>
+        </ion-col>
+      </ion-item>
+      <img src="{{item.imagePost}}">
+      <ion-card-content>
+        <ion-label>
+          <p>{{item.post}}</p>
+        </ion-label>
+      </ion-card-content>
+      <ion-item class="itemBox">
+        <ion-label class="labelStart">{{item.like}} likes</ion-label>
+        <ion-label class="labelEnd">{{item.comment}} comments</ion-label>
+      </ion-item>
+      <ion-row class="ion-text-center">
+        <ion-col col-4>
+          <ion-button color="primary" class="check" fill="clear">
+            <ion-icon slot="start" class="up" name="thumbs-up"></ion-icon>
+            <div>like</div>
+          </ion-button>
+        </ion-col>
+
+        <ion-col col-4>
+          <ion-button class="uncomment" fill="clear" (click)="getcomment(item)">
+            <ion-icon slot="start" name="chatbubbles"></ion-icon>
+            <div>comment</div>
+          </ion-button>
+        </ion-col>
+
+        <ion-col col-4>
+          <ion-button color="primary" fill="clear" class="more">
+            <ion-icon slot="end" name="more"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </div>
+  </ion-card>
+</ion-content>

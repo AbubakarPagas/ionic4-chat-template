@@ -1,0 +1,86 @@
+ion-content {
+  --background: linear-gradient(to bottom, #208590, #1c1d1c);
+}
+
+// ion-toolbar{
+//   color:  #1645dd;
+//   --background:  #849be5;
+// }
+
+ion-header {
+  // --background:  #849be5;
+  color: #849be5;
+}
+
+.top {
+  height: 36%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 45vw;
+  }
+}
+
+ion-col {
+  text-align: center;
+}
+ion-row {
+  text-align: center;
+}
+
+ion-button {
+  color: white;
+  margin: 3%;
+}
+
+p {
+  margin-top: 27%;
+  color: #d3ced3;
+  text-align: center;
+  text-size-adjust: 10px;
+  font-size: small;
+}
+
+ion-button.facebook {
+  color: #3052a8;
+}
+
+ion-button.facebook.activated,
+ion-button.facebook:active {
+  color: #345cc0;
+}
+
+ion-button.google {
+  color: #dd4b39;
+}
+
+ion-button.google.activated,
+ion-button.google:active {
+  color: #ff563f;
+}
+
+ion-button.dark {
+  color: #333;
+}
+
+ion-button.dark.activated,
+ion-button.dark:active {
+  color: #4c4c4c;
+}
+
+ion-icon.dark {
+  color: #333;
+}
+
+ion-icon.google {
+  color: #dd4b39;
+}
+
+ion-icon.facebook {
+  color: #1645dd;
+}
+i {
+  font-style: italic;
+}

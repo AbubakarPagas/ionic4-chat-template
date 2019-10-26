@@ -1,0 +1,104 @@
+<ion-content class="ion-padding">
+
+  <ion-card class="animated zoomIn delay-10s">
+    <ion-card-header class="scroll">
+      Sign Up
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="emailPasswordForm">
+        <ion-list>
+          <ion-item>
+            <ion-label class="floating" position="floating">First Name</ion-label>
+            <ion-input type="text" formControlName="firstName" [(ngModel)]="userDetails.firstName" name="firstName">
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label class="floating" position="floating">Last Name</ion-label>
+            <ion-input type="text" formControlName="lastName" [(ngModel)]="userDetails.lastName" name="lastName">
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label class="floating" position="floating">Email Address</ion-label>
+            <ion-input type="email" formControlName="email" [(ngModel)]="userDetails.email" name="email"></ion-input>
+
+          </ion-item>
+
+          <!-- for displaying the erroe massage -->
+          <div class="error-messages">
+            <ng-container *ngFor="let error of error_messages.email">
+              <div class="error-message"
+                *ngIf="emailPasswordForm.get('email').hasError(error.type) && (emailPasswordForm.get('email').dirty || emailPasswordForm.get('email').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+          <!-- for closeing the erro message -->
+
+          <ion-item>
+            <ion-label class="floating" position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="password" [(ngModel)]="userDetails.password" name="password">
+            </ion-input>
+          </ion-item>
+
+          <!-- for displaying the erroe massage -->
+          <div class="error-messages">
+            <ng-container *ngFor="let error of error_messages.password">
+              <div class="error-message"
+                *ngIf="emailPasswordForm.get('password').hasError(error.type) && (emailPasswordForm.get('password').dirty || emailPasswordForm.get('password').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+          <!-- for closeing the erro message -->
+
+          <ion-item>
+            <ion-label class="floating" position="floating"> Comfirm Password</ion-label>
+            <ion-input type="password" formControlName="cpassword" [(ngModel)]="userDetails.cpassword" name="cpassword">
+            </ion-input>
+          </ion-item>
+
+          <!-- for displaying the erroe massage -->
+          <div class="error-messages">
+            <ng-container *ngFor="let error of error_messages.cpassword">
+              <div class="error-message"
+                *ngIf="emailPasswordForm.get('cpassword').hasError(error.type) && (emailPasswordForm.get('cpassword').dirty || emailPasswordForm.get('cpassword').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+          <!-- for closeing the erro message -->
+
+        </ion-list>
+
+
+      </form>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-list class="buttoms">
+    <ion-row>
+      <ion-col col-2>
+        <ion-button class="animated zoomInUp delay-1000s" fill="outline" shape="round" size="default" (click)="back()">
+          back
+          <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+          <div></div>
+        </ion-button>
+      </ion-col>
+
+      <ion-col col-2>
+        <ion-button class="animated zoomInUp delay-1000s" size="default" [disabled]="!emailPasswordForm.valid"
+          shape="round" (click)="signUp()">
+          Register
+        </ion-button>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-list>
+
+
+</ion-content>

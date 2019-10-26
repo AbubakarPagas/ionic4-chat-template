@@ -1,0 +1,21 @@
+.scrollContent {
+  max-height: 200px;
+  overflow: scroll;
+}
+.transparent {
+  --background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
+}
+.content {
+  height: 100%;
+  width: 100%;
+  background-image: url("../assets/images/3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.list-bottom-shadow {
+  box-shadow: 0 -6px 10px inset rgba(0, 0, 0, 0.3);
+}
+.notes {
+  font-size: 14px;
+}

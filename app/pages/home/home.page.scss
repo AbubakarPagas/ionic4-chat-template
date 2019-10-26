@@ -1,0 +1,140 @@
+ion-title {
+  font-size: medium;
+  //  font-family: Georgia, 'Times New Roman', Times, serif
+  // font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  //'lucida grande', tahoma, verdana, arial, sans-serif.
+}
+.label {
+  padding-left: 17px;
+  color: #7d90b6;
+}
+img {
+  border: 2 solid #fff;
+}
+.full {
+  height: 100px;
+}
+ion-infinite-scroll-content {
+  font-size: xx-small;
+}
+
+.newsSkeleton {
+  height: 200px;
+}
+
+.time {
+  font-size: small;
+  color: var(--ion-color-medium);
+  float: right;
+  font-family: "Times New Roman", Times, serif;
+  padding-right: 10px;
+}
+
+ion-card.header {
+  background-color: #fff;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+  position: relative;
+  top: -3px;
+  //  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.style {
+  text-align: center;
+  margin: 0px auto;
+  color: #0f13aa;
+  padding-top: 22px;
+}
+
+ion-card {
+  background-color: #fff;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+  position: relative;
+  top: -10px;
+  //  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.labelStart {
+  text-align: start;
+  font-size: small;
+}
+.labelEnd {
+  text-align: end;
+  font-size: small;
+}
+ion-card-content {
+  font-size: 120%;
+  color: black;
+}
+.img {
+  height: 200px;
+}
+span.pro {
+  color: #051a65;
+  margin-right: 9px;
+}
+.check {
+  padding-right: 40%;
+  text-transform: capitalize;
+  font-size: small;
+}
+.title {
+  font-family: -webkit-pictograph;
+  padding-left: 14px;
+  color: var(--ion-color-primary);
+}
+
+.uncheck {
+  color: #383737;
+  padding-right: 40%;
+  text-transform: capitalize;
+  font-size: small;
+}
+.uncomment {
+  color: #383737;
+  padding-left: 25%;
+  text-transform: capitalize;
+  font-size: small;
+}
+.itemBox {
+  margin: -7px;
+}
+span.readmore {
+  font-size: small;
+  color: #242ca070;
+  display: flex;
+}
+.comment {
+  padding-left: 25%;
+  text-transform: capitalize;
+  font-size: small;
+}
+.more {
+  padding-left: 45%;
+  font-size: small;
+}
+.p {
+  color: #afa1a1;
+  font-family: auto;
+  font-size: small;
+}
+
+h3 {
+  font-size: xx-small;
+}
+.p-label {
+  font-family: sans-serif;
+  color: #000;
+}
+
+ion-card-title {
+  font-family: sans-serif;
+  font-size: large;
+}
+
+ion-button.buttonAdd {
+  font-size: 18px;
+}

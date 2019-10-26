@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of notificationData">
+      <ion-avatar slot="start">
+        <img src="{{item.image}}">
+        <div class="online">
+        </div>
+      </ion-avatar>
+      <ion-col>
+        <ion-label text-wrap>
+          <ion-text>
+            <p> <strong>{{item.name}}</strong> {{item.comment}}</p>
+          </ion-text>
+        </ion-label>
+      </ion-col>
+      <div class="rating">
+        <ion-button fill='clear'>
+          <ion-icon name="more" class="success"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-item>
+
+
+
+  </ion-list>
+</ion-content>

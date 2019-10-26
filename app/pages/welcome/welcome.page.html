@@ -1,0 +1,47 @@
+<ion-content class="ion-padding">
+    <div class="top">
+        <img class="animated flip infinite delay-10s " src="assets/icon/favicon.png">
+    </div>
+
+    <ion-row>
+        <ion-col size="6">
+            <div class="register" class="animated  bounceInLeft delay-10s">
+                <ion-button size="default" color="light" (click)="signUp()" fill="outline">Sign Up</ion-button>
+            </div>
+        </ion-col>
+
+        <ion-col size="6">
+            <div class="scholar" class="animated  bounceInRight delay-10s">
+                <ion-button size="default" color="light" fill="outline" (click)="signIn()">Sign In</ion-button>
+            </div>
+        </ion-col>
+    </ion-row>
+
+
+    <div class="animated  zoomInDown delay-25s">
+        <ion-button size="default" color="light" expand="block" fill="outline" (click)="facebookLogin()">facebook
+            <ion-icon slot="start" name="logo-facebook" class="facebook"></ion-icon>
+        </ion-button>
+
+    </div>
+
+    <div class="animated  zoomInDown delay-35s">
+        <ion-button size="default" color="light" expand="block" fill="outline" (click)="googleLogin()">Gmail
+            <ion-icon slot="start" name="logo-google" class="google"></ion-icon>
+        </ion-button>
+    </div>
+
+    <div class="animated  zoomInDown delay-45s">
+        <ion-button size="default" color="light" (click)="out()" expand="block" fill="outline">Phone Number
+            <ion-icon slot="start" name="call" class="dark"></ion-icon>
+        </ion-button>
+    </div>
+
+    <p class="animated  zoomIn delay-55s">
+        By creating a new account or singing in with facebook, Gmail Phone Number,
+        you are agreeing to our<ion-text color="light"><i>Term of Service</i></ion-text> and
+        <ion-text color="light"><i>Privacy </i></ion-text>
+        <ion-text color="light"><i> Policy</i></ion-text>
+    </p>
+
+</ion-content>

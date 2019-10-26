@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button slot="end" fill="clear">
+      <ion-icon name="search" expand="icon-only"> </ion-icon>
+    </ion-button>
+    <ion-title>Message</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="ion-no-padding">
+
+    <ion-item *ngFor="let chat of chatData" (click)="goforChat(chat)">
+      <ion-avatar slot="start">
+        <ion-img class="user-img" [src]="chat.image"></ion-img>
+        <div class="online" *ngIf="chat.status == 'online'">
+        </div>
+        <div class="ofline" *ngIf="chat.status == 'ofline'">
+        </div>
+      </ion-avatar>
+      <ion-label>
+        <div class="withcount">
+          <div class="nameAvatar">
+            <h2>{{chat.name}}
+            </h2>
+            <ion-avatar class="chatCount" *ngIf="chat.count">{{chat.count}}</ion-avatar>
+          </div>
+
+          <div class="timeEnd">
+            <ion-text slot="end">{{chat.time}}</ion-text>
+          </div>
+        </div>
+        <p class="widthHalf">{{chat.description}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
