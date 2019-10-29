@@ -5,12 +5,8 @@
 
 ### Screenshots
 
-<col>
+<Rows>
 <img src="screenshot/comment1.png" height="300em" />
-<col/>
-<col>
 <img src="screenshot/feed.png" height="300em" />
-<col/>
-<col>
 <img src="screenshot/login.png" height="300em" />
-<col/>
+<Rows/>
